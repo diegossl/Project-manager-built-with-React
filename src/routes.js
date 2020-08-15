@@ -2,15 +2,13 @@ import React from 'react'
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import Home from './pages/home'
-import Register from './pages/user/register'
+import Login from './pages/login'
 
 const routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact={true} path="/" component={Home} />
-        <Route exact={true} path="/cadastro" component={Register} />
+        <Route exact={true} path="/login" component={Login} />
       </Switch>
     </BrowserRouter>
   )
