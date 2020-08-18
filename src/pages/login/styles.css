@@ -1,3 +1,11 @@
 body {
-  background-color: #80BDFF;
+  margin-top: 150px !important;
+}
+
+.header-box {
+  background-color: #1E2B37;
+}
+
+.text-color {
+  color: white;
 }
