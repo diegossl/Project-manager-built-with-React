@@ -25,9 +25,9 @@ function Login () {
                   <label for="inputPassword" className="col-sm col-form-label">Senha</label>
                   <div className="col-sm-12">
                     <Input 
-                        type="password"
-                        placeholder="Senha"
-                        className="form-control"
+                      type="password"
+                      placeholder="Senha"
+                      className="form-control"
                     />
                   </div>
                 </div>
