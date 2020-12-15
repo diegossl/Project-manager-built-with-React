@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { FC } from 'react'
 
-const Home: FC = () => {
+export const Home: FC = () => {
   return (
     <div>
       <Head>
