@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
 type Props = {
-  fontSize: boolean
-  outlined: string
+  size: number
+  outlined: boolean
   theme: { colors: { primary: string } }
 }
 
-export default styled.button`
+const Button = styled.button<Props>`
   width: 100%;
   font-size: ${(props: Props) =>
-    props.fontSize != null ? `${props.fontSize}px` : '18px'};
+    props.size != null ? `${props.size}px` : '18px'};
   font-weight: 700;
   height: 100%;
   background-color: ${(props: Props) => props.theme.colors.primary};
@@ -26,3 +26,5 @@ export default styled.button`
       props.outlined ? 'rgba(22,24,35,0.03)' : props.theme.colors.primary};
   }
 `
+
+export default Button

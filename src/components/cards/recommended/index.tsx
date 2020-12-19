@@ -9,7 +9,7 @@ type CardType = {
   }
 }
 
-const Card: FC<CardType> = ({ recommended }) => {
+const RecommendedCard: FC<CardType> = ({ recommended }) => {
   return (
     <Container>
       <Avatar src={recommended.avatar}></Avatar>
@@ -21,4 +21,4 @@ const Card: FC<CardType> = ({ recommended }) => {
   )
 }
 
-export default Card
+export default RecommendedCard
