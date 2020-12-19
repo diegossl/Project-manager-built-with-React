@@ -1,4 +1,5 @@
-import { useRef, useState } from 'react'
+import { FC, useRef, useState, RefObject } from 'react'
+import Button from '../../button'
 import {
   Container,
   Header,
@@ -18,17 +19,37 @@ import {
   Action,
   ButtonContainer
 } from './styles'
-import Button from '../button'
 
-function PostCard({ post }) {
-  const videoRef = useRef()
+type Post = {
+  post: {
+    id: number
+    description: string
+    tags: Array<{ title: string }>
+    songName: string
+    videoUrl: string
+    likes: number
+    comments: number
+    replies: number
+    author: {
+      id: number
+      avatar: string
+      name: string
+      username: string
+    }
+  }
+}
+
+const PostCard: FC<Post> = ({ post }) => {
+  const videoRef: RefObject<HTMLVideoElement> = useRef()
   const [running, setRunning] = useState(false)
 
   const toggleAction = () => {
     if (videoRef?.current != null) {
-      if (!running) videoRef.current.play()
-      else videoRef.current.pause()
-
+      if (!running) {
+        videoRef.current.play()
+      } else {
+        videoRef.current.pause()
+      }
       setRunning(!running)
     }
   }
@@ -52,7 +73,7 @@ function PostCard({ post }) {
           </Info>
         </PersonContainer>
         <ButtonContainer>
-          <Button fontSize={14} outlined>
+          <Button size={14} outlined>
             Seguir
           </Button>
         </ButtonContainer>
@@ -67,8 +88,7 @@ function PostCard({ post }) {
             ref={videoRef}
             src={post?.videoUrl}
             webkit-playsinline="true"
-            playsinline=""
-            loop="true"
+            loop
             preload="metadata"
           ></Video>
           <ActionsContainer onClick={toggleAction}>

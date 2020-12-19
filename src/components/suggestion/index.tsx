@@ -1,5 +1,5 @@
 import RecommendedCard from '../cards/recommended'
-import { itens, people } from './data'
+import { itens, people } from '../../api/suggestions'
 import Button from '../button'
 import User from '../user'
 import { FC } from 'react'
