@@ -1,17 +1,15 @@
-import Head from 'next/head'
+import Suggestion from '../components/suggestion'
+import Layout from '../components/layout'
+import Feed from '../components/feed'
+import { posts } from '../api/posts'
 import { FC } from 'react'
 
 const Home: FC = () => {
   return (
-    <div>
-      <Head>
-        <title>Homepage</title>
-      </Head>
-
-      <main>
-        <h1>Hello World</h1>
-      </main>
-    </div>
+    <Layout>
+      <Feed posts={posts}></Feed>
+      <Suggestion></Suggestion>
+    </Layout>
   )
 }
 
