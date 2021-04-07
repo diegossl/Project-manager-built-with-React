@@ -4,7 +4,7 @@ export const posts = [
     author: {
       id: 1,
       avatar:
-        'https://p77-sign-sg.tiktokcdn.com/musically-maliva-obj/1611351992302598~c5_100x100.jpeg?x-expires=1608490800&x-signature=hJIFWnAcju7xMhmczf6nYW6HY44%3D',
+        'https://p77-sign-va.tiktokcdn.com/musically-maliva-obj/1611351992302598~c5_720x720.jpeg?x-expires=1617847200&x-signature=32lZvvwZXZ%2FSI8IV8e0wGI5d%2Buo%3D',
       name: 'Alok',
       username: 'alok'
     },
